@@ -17,7 +17,7 @@ const { administrativa } = require("./datos.js");
     return callback(null, mascotassss);
  }
 
- // Creamos la funcion buscar responsables con la cual buscaremos mascotas por su id
+ // Creamos la funcion buscar responsables con la cual buscaremos responsables por su id
  function buscarresponsableporid(id, callback)
  {
      const responsablesssss = responsable.find((responsablesssss)=> responsablesssss.id=== id);   
