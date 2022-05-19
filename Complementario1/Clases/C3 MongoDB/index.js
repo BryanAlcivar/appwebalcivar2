@@ -14,7 +14,7 @@ const conexion= "mongodb+srv://admin1:admin1@cluster0.cgxph.mongodb.net/Refugio?
     {
          nombre: String,
          idgrupo: { type: mongoose.Types.ObjectId , ref:"Grupo" } ,
-        //  permisos: [{ type: mongoose.Types.ObjectId , ref:"Permiso" }] ,
+        //permisos: [{ type: mongoose.Types.ObjectId , ref:"Permiso" }] ,
         permisos:[
             {
                 permiso: { type: mongoose.Schema.Types.ObjectId, ref:"Permiso" },
