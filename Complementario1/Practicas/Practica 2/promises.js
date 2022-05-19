@@ -1,7 +1,9 @@
+//creamos las constantes para llamar a los arreglos que estan alamcenados en datos.js
 const { mascota } = require("./datos.js");
 const { responsable } = require("./datos.js");
 const { administrativa } = require("./datos.js");
 
+// Creamos la funcion buscarmascota con la cual buscaremos mascotas por su id
  function buscarmascotaporid(id)
  {
      return new Promise((resolve, reject)=>{
@@ -17,6 +19,7 @@ const { administrativa } = require("./datos.js");
      })
 
  }
+ // Creamos la funcion buscarresposables con la cual buscaremos responsables por su id
  function asociarResponsableAlaMascota(mascotassss)
 {
     return new Promise((resolve,reject)=>{
@@ -48,6 +51,7 @@ const { administrativa } = require("./datos.js");
 
 // let mascotaaux={};
 
+//buscamos la mascota y nos mostrara los datos
 buscarmascotaporid(2)
 .then((mascotassss)=>{
     // console.log(mascotassss)
