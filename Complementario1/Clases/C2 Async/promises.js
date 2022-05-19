@@ -85,7 +85,7 @@ const platos=[
 // let platoAuxiliar={};
 
 
-//buscamos un un plato por su id y este lo buscara en los restaurantes que ya asociamos anteriormente
+//buscamos un un plato por id y este lo buscara en los restaurantes que ya asociamos anteriormente
 buscarPlatoPorId(2)
 .then((plato)=>{
     // console.log(plato)
