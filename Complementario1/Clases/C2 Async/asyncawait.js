@@ -1,3 +1,4 @@
+//Creamos la constante Platos en las cuales inicializaremos los arreglos
 const platos=[
     {
         id:1,
@@ -21,6 +22,7 @@ const platos=[
     },
 
  ]
+ // //Creamos la constante Platos en las cuales inicializaremos los arreglos
  const restaurantes=[
      {
         id:1,
@@ -33,10 +35,13 @@ const platos=[
  ]
 
 
-
+// Creamos la funcion asyn con la cual buscaremos platos por su id
 async function buscarPlatoPorId(id)
 {
+    //se crea la constante plato en la cual almacenaremos los arreglos que se guardaron en los platos y que luego se los buscara
     const plato  = platos.find((plato)=> plato.id=== id);
+
+    //se crea un if y si el plato no esta en el arreglo se mostrara el mensaje de error
     if (!plato)
     {
         const error= new Error();
@@ -45,6 +50,8 @@ async function buscarPlatoPorId(id)
     }
     return plato;
 }
+
+// Creamos la funcion asyn con la cual buscaremos platos por su id
 function buscarRestaurantePorId(id)
 {
     const restaurante =  restaurantes.find((restaurante)=> restaurante.id===id);
@@ -58,7 +65,7 @@ function buscarRestaurantePorId(id)
 }
 
 
-
+//buscaremos los platos y buscaremos su restaurante por id
 (async ()=> {
     try {
         const plato =   await buscarPlatoPorId(1);

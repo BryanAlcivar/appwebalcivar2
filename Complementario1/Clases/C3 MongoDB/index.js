@@ -1,10 +1,12 @@
+//definimos las constante y agregamos la ruta para la conexion con la base de Mongo Atlas
 const mongoose = require('mongoose');
-const conexion= "mongodb+srv://joancema:jacm1310@cluster0.x7met.mongodb.net/ejemploSextoA?retryWrites=true&w=majority";
+const conexion= "mongodb+srv://admin1:admin1@cluster0.cgxph.mongodb.net/Refugio?retryWrites=true&w=majority";
 
 ( async ()=>{
-    const estadoConexion = await mongoose.connect(conexion);
+    const estadoConexion = await mongoose.connect(conexion);//constante para establecer el estado de conexion con la base
 
 
+    // constante con las diferentes entidades y atributos que se almacenaran en la base
     const Grupo = mongoose.model("Grupo", {nombre:String});
     const Permiso = mongoose.model("Permiso", {nombre:String});
 
@@ -21,7 +23,7 @@ const conexion= "mongodb+srv://joancema:jacm1310@cluster0.x7met.mongodb.net/ejem
         ]
     } 
     );
-
+//se crean las constantes con los grupos y se guardan respectivamente
     const grupo1 =  new Grupo({nombre:"Administradores"});
     const guardoGrupo = await  grupo1.save();
     const permiso1 = new Permiso({nombre:"Grabar"});
@@ -30,6 +32,7 @@ const conexion= "mongodb+srv://joancema:jacm1310@cluster0.x7met.mongodb.net/ejem
     const guardoPermiso2 = await permiso2.save();
 
 
+    //Se agregan los datos y se guardan
     const usuario1=  new Usuario(
         {
             nombre:"Prueba sexto A",
