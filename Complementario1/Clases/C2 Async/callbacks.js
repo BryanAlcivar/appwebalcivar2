@@ -33,7 +33,7 @@
         nombre:'Miguelito Restaurant',
      },
  ]
-// Creamos la funcion buscar plato por id
+// Creamos la funcion buscar plato por su id
  function buscarPlatoPorId(id, callback)
  {
      //creamos la constante plato en la que guardaremos los datos de los arreglos de platos
