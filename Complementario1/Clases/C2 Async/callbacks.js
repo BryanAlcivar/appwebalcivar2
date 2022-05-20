@@ -1,3 +1,4 @@
+ //creamos la constante platos y en ella se definiran sus arreglos
  const platos=[
     {
         id:1,
@@ -21,6 +22,7 @@
     },
 
  ]
+ //creamos la constante restaurante y en ella se definiran sus arreglos
  const restaurantes=[
      {
         id:1,
@@ -31,10 +33,13 @@
         nombre:'Miguelito Restaurant',
      },
  ]
-
+// Creamos la funcion buscar plato por su id
  function buscarPlatoPorId(id, callback)
  {
+     //creamos la constante plato en la que guardaremos los datos de los arreglos de platos
     const plato =  platos.find((plato)=>  plato.id=== id );
+
+    //condicion en la que si no esta el plato con su id, mostrara el mensaje de error
     if (!plato)
     {
         const error =  new Error();
@@ -43,6 +48,8 @@
     }
     return callback(null, plato);
  }
+
+ //// Creamos la funcion buscar restaurante por id
  function buscarRestaurantePorId(id, callback)
  {
      const restaurante = restaurantes.find((restaurante)=> restaurante.id=== id);   //5==='5'
@@ -55,6 +62,7 @@
      return callback(null, restaurante);
  }
 
+ //definimos el id del plato que queremos buscar y si este no está, mostrara un error por consola
  buscarPlatoPorId(3, (err, plato)=>{
     if (err)
     {

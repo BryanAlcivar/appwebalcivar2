@@ -1,8 +1,10 @@
-
+//creamos las constantes para llamar a los arreglos que estan alamcenados en datos.js
 const { mascota } = require("./datos.js");
 const { responsable } = require("./datos.js");
 const { administrativa } = require("./datos.js");
 
+
+// Creamos la funcion buscarmascota con la cual buscaremos mascotas por su id
  function buscarmascotaporid(id, callback)
  {
     const mascotassss =  mascota.find((mascotassss)=>  mascotassss.id=== id );
@@ -14,6 +16,8 @@ const { administrativa } = require("./datos.js");
     }
     return callback(null, mascotassss);
  }
+
+ // Creamos la funcion buscar responsables con la cual buscaremos responsables por su id
  function buscarresponsableporid(id, callback)
  {
      const responsablesssss = responsable.find((responsablesssss)=> responsablesssss.id=== id);   
@@ -26,6 +30,7 @@ const { administrativa } = require("./datos.js");
      return callback(null, responsablesssss);
  }
 
+ //buscamos la mascota y nos mostrara los datos, ademas si no existe su id nos dará error por consola
  buscarmascotaporid(3, (err, mascotassss)=>{
     if (err)
     {

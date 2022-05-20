@@ -1,3 +1,4 @@
+//creamos la constante platos y en ella se definiran sus arreglos
 const platos=[
     {
         id:1,
@@ -21,6 +22,8 @@ const platos=[
     },
 
  ]
+
+ //creamos la constante restaurante y en ella se definiran sus arreglos
  const restaurantes=[
      {
         id:1,
@@ -32,6 +35,7 @@ const platos=[
      },
  ]
 
+// Creamos la funcion buscar plato por id
  function buscarPlatoPorId(id)
  {
      return new Promise((resolve, reject)=>{
@@ -47,6 +51,8 @@ const platos=[
      })
 
  }
+
+ //creamos la funcion para asociar el restaurante al plato y buscarlos por su id
  function asociarRestauranteAPlato(plato)
 {
     return new Promise((resolve,reject)=>{
@@ -78,6 +84,8 @@ const platos=[
 
 // let platoAuxiliar={};
 
+
+//buscamos un un plato por id y este lo buscara en los restaurantes que ya asociamos anteriormente
 buscarPlatoPorId(2)
 .then((plato)=>{
     // console.log(plato)
